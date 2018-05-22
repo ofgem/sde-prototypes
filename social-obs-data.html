@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Title here -->
+	<title>Secure Data Exchange - landing</title>
+	<!-- Description, Keywords and Author -->
+	<meta name="description" content="Your description">
+	<meta name="keywords" content="Your,Keywords">
+	<meta name="author" content="ResponsiveWebInc">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Styles -->
+	<!-- Form Wizard Steps CSS -->
+	<link href="css/steps.css" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- jQuery gritter -->
+	<link href="css/jquery.gritter.css" rel="stylesheet">
+	<!-- Font awesome CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+	<!-- Custom Color CSS -->
+	<link href="css/less-style.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/checkboxes.css" rel="stylesheet">
+	<link href="css/uploader.css" rel="stylesheet">
+
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="#">
+	<style type="text/css">
+		.dl-horizontal dt {
+			width: 120px;
+		}
+
+		.dl-horizontal dd {
+			margin-left: 140px;
+		}
+
+		.side-nav a,
+		.navbar-inverse .navbar-nav>li>a {
+			color: #d6d6d6;
+		}
+
+		.navbar-inverse {
+			margin-bottom: 0;
+		}
+
+		.collapse .well {
+			margin-bottom: 0;
+		}
+
+		.collapse div[class*='col-sm'] {
+			padding: 0;
+		}
+
+		.row.btns-list {
+			margin-bottom: 20px
+		}
+
+		.main-head .head-noty .label-large {
+			padding: 0px;
+			width: 25px;
+			height: 25px;
+			text-align: center;
+			line-height: 25px;
+			display: inline-block;
+			border-radius: 100px;
+			font-size: 1.2em;
+			position: absolute;
+			left: 5px;
+			margin-left: 5px;
+		}
+
+		h2 {
+			padding-top: 0.7em;
+			padding-bottom: 0.7em
+		}
+
+		#frm-upload .progress {
+			height: 35px;
+
+		}
+
+		#frm-upload .progress .skill {
+			line-height: 35px;
+			padding: 0;
+			margin: 0 0 0 20px;
+			text-transform: uppercase;
+		}
+
+		#frm-upload .progress .skill .val {
+			float: right;
+			font-style: normal;
+			margin: 0 20px 0 0;
+		}
+
+		#frm-upload .progress-bar {
+			text-align: left;
+			transition-duration: 3s;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<nav class="navbar navbar-default  navbar-inverse" role="navigation">
+					<div class="navbar-header">
+
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html"><img src="img/ofgem-logo.png"  style="height:30px; margin-top:-6px" class="pull-left"/><span class="pull-left">&nbsp;&nbsp;Data Exchange</span></a>
+					</div>
+
+					<div class="col-sm-6 col-sm-4 pull-right" style="padding-top:9px">
+						<form class="navbar-form" role="search">
+							<div class="input-group pull-right">
+								<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+								<div class="input-group-btn">
+									<button class="btn btn-default" type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-sm-6 col-sm-4 pull-right">
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a role="button" data-toggle="collapse" href="#dropdown-user-tray" aria-expanded="false" aria-controls="dropdown-user-tray">
+										<h3>ABC Energy - Amanda Smith
+											<i class="fa fa-caret-down"></i>
+										</h3>
+									</a>
+
+
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12 collapse" id="dropdown-user-tray">
+
+				<div class="row">
+					<div class="col-sm-3 col-xs-6">
+						<div class="well">
+							<span class="col-sm-3 text-right">
+								<i class="fa  fa-user fa-3x "></i>
+							</span>
+							<div class="col-sm-9">
+								<h5>
+									<a href="#">Jane Arnold</a>
+								</h5>
+								<p>Regulatory management </p>
+							</div>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="well">
+							<span class="col-sm-3">
+								<i class="fa  fa-user fa-3x"></i>
+							</span>
+							<div class="col-sm-7">
+								<h5>
+									<a href="#">Harold Jones</a>
+								</h5>
+								<p>Security contact </p>
+							</div>
+							<span class="col-sm-2">
+								<i class="fa fa-lock fa-2x" style="color:green"></i>
+							</span>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="well">
+							<span class="col-sm-3">
+								<i class="fa  fa-user fa-3x"></i>
+							</span>
+							<div class="col-sm-9">
+								<h5>
+									<a href="#">Mike Debbens</a>
+								</h5>
+								<p>IT</p>
+							</div>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="well">
+							<span class="col-sm-3">
+
+							</span>
+							<div class="col-sm-7">
+								<h5>
+									<a href="#">9 more contacts
+										<i class="fa fa-caret-right"></i>
+									</a>
+								</h5>
+								<p>&nbsp;</p>
+							</div>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-12">
+
+				<div class="row">
+					<div class="col-sm-3">
+
+
+						<div class="sidebar" style="width:90%">
+
+							<div class="sidey">
+
+
+								<!-- Sidebar navigation starts -->
+
+								<!-- Responsive dropdown -->
+								<div class="sidebar-dropdown">
+									<a href="#" class="br-red">
+										<i class="fa fa-bars"></i>
+									</a>
+								</div>
+
+								<div class="side-nav">
+
+									<div class="side-nav-block">
+
+										<div class="breads">
+											<a href="landing.html">Your data</a> / Social Obligations
+										</div>
+										<div class="clearfix"></div>
+
+										<!-- Sidebar links -->
+										<ul class="list-unstyled">
+
+											<li>
+												<a href="social-obs.html" id="btn-submissions-due">
+													<i class="fa fa-bullseye"></i> Submissions due
+													<span class="badge badge-danger pull-right">1</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" id="btn-submissions-prev" class="active">
+													<i class="fa fa-bullseye"></i> Your data
+													<span class="badge badge-success pull-right">23</span>
+												</a>
+											</li>
+											<li>
+												<a href="social-obs-guidance.html">
+													<i class="fa fa-info"></i> Guidance</a>
+											</li>
+
+
+
+
+
+
+
+										</ul>
+									</div>
+
+									<div class="side-nav-block">
+										<h4>More options</h4>
+										<ul class="list-unstyled">
+											<!-- Mainmenu with submenu -->
+											<li class="has_submenu">
+												<a href="#">
+													<i class="fa fa-table"></i> My data
+													<span class="nav-caret fa fa-caret-down"></span>
+												</a>
+												<!-- Submenu -->
+												<ul class="list-unstyled">
+													<li>
+														<a href="tables.html">
+															<i class="fa fa-angle-double-right"></i> Current submissions</a>
+													</li>
+													<li>
+														<a href="tables-data.html">
+															<i class="fa fa-angle-double-right"></i> Your submissions</a>
+													</li>
+												</ul>
+											</li>
+											<!-- Mainmenu with submenu -->
+											<!-- Mainmenu with submenu -->
+											<li class="has_submenu">
+												<a href="#">
+													<i class="fa fa-table"></i> ABC Energy data
+													<span class="nav-caret fa fa-caret-down"></span>
+												</a>
+												<!-- Submenu -->
+												<ul class="list-unstyled">
+													<li>
+														<a href="tables.html">
+															<i class="fa fa-angle-double-right"></i> Current submissions</a>
+													</li>
+													<li>
+														<a href="tables-data.html">
+															<i class="fa fa-angle-double-right"></i> Your submissions</a>
+													</li>
+												</ul>
+											</li>
+
+											<li>
+												<a href="#">
+													<i class="fa  fa-plus"></i> Add dataset</a>
+											</li>
+									</div>
+
+
+								</div>
+
+								<!-- Sidebar navigation ends -->
+
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-sm-9 ">
+						<div>
+							<!-- Modal Success Popup -->
+							<div class="modal fade" id="popup-confirmation" tabindex="-1" role="dialog">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content" id="popup-warning-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">×</span>
+											</button>
+											<h4 class="modal-title text-center">
+													There were issues reading the data</h4>
+										</div>
+										<div class="modal-body text-center">
+											<i class="fa fa-3x fa-exclamation-circle warning"></i>
+											<p class="lead">Data was received, but there were some issues. 
+												Please review the issues and re-upload if necessary</p>
+											<p>The receipt number is: <span class="label label-info">SO-6752-1</span></p>
+											<p><br/></p>
+											<a href="#" class="btn btn-default" id="btn-close-confirmation" data-dismiss="modal">Close</a>
+										</div>
+
+									</div>
+
+									<div class="modal-content" id="popup-success-content" style="display:none">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">×</span>
+												</button>
+												<h4 class="modal-title text-center">Your data has been uploaded </h4>
+											</div>
+											<div class="modal-body text-center">
+												<i class="fa fa-3x fa-check-circle-o success"></i>
+												<p>The receipt number is: <span class="label label-info">SO-6752-2</span></p>
+												<p><br/></p>
+												<a href="#" class="btn btn-default" id="btn-close-confirmation" data-dismiss="modal">Close</a>
+											</div>
+	
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-12" id="js-existing-submissions">
+
+									<h2>Your data
+											<a href="#" class="btn pull-right" style="margin-right:20px" id="btn-upload-data">
+													<i class="fa fa-plus"></i> Add updated version</a>
+										<a href="#" class="btn btn-primary pull-right" style="margin-right:20px" id="btn-upload-version">
+											<i class="fa fa-upload"></i> Upload new data</a>
+
+									</h2>
+									<div class="row">
+										<div class="col-sm-2" style="padding-left:40px"><a href="#">Status</a></div>
+										<div class="col-sm-4"></div>
+										<div class="col-sm-2"><a href="#">Date</a></div>
+										<div class="col-sm-2"><a href="#">Receipt</a></div>
+										<div class="col-sm-2"></div>
+									</div>
+
+									<div class="panel panel-default pnl-after-upload" style="display:none">
+											<div class="panel-body">
+												<div class="row">
+														<div class="col-sm-2">
+														<span class="badge badge-primary">Submitted</span>
+												</div>
+													<div class="col-sm-4">
+														<h3>
+															<a href="#">Gas Yearly </a>
+														</h3>
+													</div>
+	
+													<div class="col-sm-2">08 April 2018</div>
+	
+													<div class="col-sm-2">SO-6752-1</div>
+													<div class="col-sm-2">
+															<a href="#" class="btn btn-default"><i href="fa fa-download"></i>Download</a>
+														</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-10 col-sm-push-2" style="border-bottom:2px silver">
+														<div class="row">
+															<div class="col-sm-9">
+																	<i class="fa fa-check"></i>
+																1487 rows imported successfully
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+									<div class="panel panel-default pnl-after-upload"  style="display:none">
+										<div class="panel-body">
+											<div class="row">
+													<div class="col-sm-2">
+															<span class="badge badge-warning">Action needed</span>
+											</div>
+												<div class="col-sm-4">
+													<h3>
+														<a href="#">Electricity Yearly </a>
+													</h3>
+												</div>
+
+												<div class="col-sm-2">08 April 2018</div>
+
+												<div class="col-sm-2">SO-6752-1</div>
+												<div class="col-sm-2">
+														<a href="#" class="btn btn-default"><i href="fa fa-download"></i>Download</a>
+													</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-10 col-sm-push-2" style="border-bottom:2px silver">
+													<h4 style="margin-top:0.5em">3 Issues found</h4>
+													<div class="row">
+														<div class="col-sm-2">
+																<i class="fa fa-warning"></i>
+															Row 459
+														</div>
+														<div class="col-sm-9">
+															Invalid date, should be in the format dd/mm/yy, such as 31/03/2018
+														</div>
+													</div>
+													<div class="row">
+															<div class="col-sm-2">
+																	<i class="fa fa-warning"></i>
+																
+																Row 1098
+															</div>
+															<div class="col-sm-9">
+																Status Type needs to match list of allowed, such as [Ordered, Installed, Returned]
+															</div>
+														</div>
+														<div class="row">
+																<div class="col-sm-2">
+																		<i class="fa fa-warning"></i>
+																	
+																	Row 2091
+																</div>
+																<div class="col-sm-9">
+																	Invalid date, should be in the format dd/mm/yy, such as 31/03/2018
+																</div>
+															</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+											<div class="panel-body">
+												<div class="row">
+														<div class="col-sm-2">
+														<span class="badge badge-success">Accepted</span>
+												</div>
+													<div class="col-sm-4">
+														<h3>
+															<a href="#">Gas Quarterly </a>
+														</h3>
+													</div>
+	
+													<div class="col-sm-2">31 March 2018</div>
+	
+													<div class="col-sm-2">SO-6734-1</div>
+													<div class="col-sm-2">
+															<a href="#" class="btn btn-default"><i href="fa fa-download"></i>Download</a>
+														</div>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+												<div class="panel-body">
+													<div class="row">
+															<div class="col-sm-2">
+															<span class="badge badge-success">Accepted</span>
+													</div>
+														<div class="col-sm-4">
+															<h3>
+																<a href="#">Electric Quarterly (V2)</a>
+															</h3>
+														</div>
+		
+														<div class="col-sm-2">31 March 2018</div>
+		
+														<div class="col-sm-2">SO-3478-2</div>
+														<div class="col-sm-2">
+																<a href="#" class="btn btn-default"><i href="fa fa-download"></i>Download</a>
+															</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel panel-default">
+													<div class="panel-body">
+														<div class="row">
+																<div class="col-sm-2">
+																<span class="badge badge-success">Accepted</span>
+														</div>
+															<div class="col-sm-4">
+																<h3>
+																	<a href="#">Gas Quarterly </a>
+																</h3>
+															</div>
+			
+															<div class="col-sm-2">20 December 2017</div>
+			
+															<div class="col-sm-2">SO-6821-1</div>
+															<div class="col-sm-2">
+																	<a href="#" class="btn btn-default"><i href="fa fa-download"></i>Download</a>
+																</div>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+														<div class="panel-body">
+															<div class="row">
+																	<div class="col-sm-2">
+																	<span class="badge badge-success">Accepted</span>
+															</div>
+																<div class="col-sm-4">
+																	<h3>
+																		<a href="#">Electric Quarterly</a>
+																	</h3>
+																</div>
+				
+																<div class="col-sm-2">23 December 2017</div>
+				
+																<div class="col-sm-2">SO-3097-1</div>
+																<div class="col-sm-2">
+																		<a href="#" class="btn btn-default"><i href="fa fa-download"></i>Download</a>
+																	</div>
+															</div>
+														</div>
+													</div>
+								</div>
+
+
+
+
+
+								<div class="col-sm-12" id="js-form-submit-data" style="display:none">
+
+									<div class="row">
+
+
+										<!-- Form page -->
+										<div class="page-form col-sm-9">
+												<!-- Form Content -->
+												<h2>Yearly Submission - Gas</h2>
+	
+												<!-- Form wizard content -->
+	
+												<div id="wizard" role="application" class="wizard clearfix">
+													<!-- Heading -->
+													<h2>Step 1 - Confirm Data</h2>
+													<!-- First step form content -->
+	
+													<div>
+														<form id="form-2" action="#" class="form-horizontal">
+
+																<div class="row">
+																		<div class="col-sm-12">
+																				What type of data are you uploading?
+																			</div>	
+																		<div class="col-sm-6">
+																			<div class="form-check radio">
+																				<label>
+																					<input type="radio" name="data-type" checked>
+																					<span class="label-text">Social Obs Gas (Yearly)</span>
+																				</label>
+																			</div>
+																			<div class="form-check radio">
+																				<label>
+																					<input type="radio" name="data-type">
+																					<span class="label-text">Social Obs Electricity (Yearly)</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="col-sm-6">
+																			<div class="form-check radio">
+																				<label>
+																					<input type="radio" name="data-type">
+																					<span class="label-text">Social Obs Gas (Monthly)</span>
+																				</label>
+																			</div>
+																			<div class="form-check radio">
+																				<label>
+																					<input type="radio" name="data-type">
+																					<span class="label-text">Social Obs Electricity (Monthly)</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="col-sm-6">
+																			<div class="form-check radio">
+																				<label>
+																					<input type="radio" name="data-type">
+																					<span class="label-text">Other</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row">
+																			<div class="col-sm-12">
+																					How do you want to upload the data?
+																				</div>	
+																			<div class="col-sm-6">
+																				<div class="form-check checkbox">
+																					<label>
+																						<input type="radio" name="toggle" checked>
+																						<span class="label-text">Submit file online</span>
+																					</label>
+																				</div>
+																				<div class="form-check  checkbox">
+																					<label>
+																						<input type="radio" name="toggle">
+																						<span class="label-text">Use an API</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="col-sm-6">
+																				<div class="form-check  checkbox">
+																					<label>
+																						<input type="radio" name="toggle">
+																						<span class="label-text">sFTP</span>
+																					</label>
+																				</div>
+																				<div class="form-check  checkbox">
+																					<label>
+																						<input type="radio" name="toggle">
+																						<span class="label-text">Huddle</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="col-sm-6">
+																				<div class="form-check  checkbox">
+																					<label>
+																						<input type="radio" name="toggle">
+																						<span class="label-text">Email</span>
+																					</label>
+																				</div>
+																			</div>
+																		</div>																	
+
+														</form>
+													</div>
+													<!-- First section End -->
+	
+													<!-- Heading -->
+													<h2>Step 2 - Upload Files</h2>
+	
+													<!-- Second step form content -->
+													<div>
+														<!-- Upload  -->
+														<form id="frm-upload">
+						<h4 class="pnl-during-upload">Upload files</h4>
+						<div class="row pnl-before-upload">
+								<div class="col-sm-4">
+									<p>1. Prepare with 
+										<a href="#" class="btn-link">agreed template</a>
+									</p>
+								</div>
+								<div class="col-sm-4">
+									<p>2. Drag files or choose <strong>Add file</strong> below</p>
+								</div>
+								<div class="col-sm-4">
+									<p>3. Check the status, and fix any issues</p>
+								</div>
+							</div>
+							<div class="row pnl-during-upload">
+									<div class="col-sm-12">
+										<p>Uploading <strong>2</strong> files</p>
+									</div>
+								</div>
+																<div class="progress skill-bar " id="progress-1" style="display:none"><!-- progress-bar-info progress-bar-warning progress-bar-danger -->
+																		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+																			<span class="skill">Social-Obs-Gas-April-2018.csv
+																				<i class="val pnl-after-upload" style="display:none">Success</i>
+																			</span>
+																		</div>
+																	</div>
+																	<div class="progress skill-bar " id="progress-1" style="display:none"><!-- progress-bar-info progress-bar-warning progress-bar-danger -->
+																		<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+																			<span class="skill">Social-Obs-Elec-April-2018.csv
+																				<i class="val  pnl-after-upload"  style="display:none">3 Issues</i>
+																			</span>
+																		</div>
+																	</div>		
+									<div class="well well-lg js-addfile-click" id="pnl-addfile" style="background-color: silver; cursor:copy">
+											<span class="col-sm-12 text-center"><i class="fa fa-download fa-3x" aria-hidden="true"></i></span>
+											<h3 class="text-center">Add file or drag and drop files here</h3>
+
+									</div>
+			
+
+			
+														</form>
+														<div class="well">
+																<a class="btn" style="display:none">Cancel</a>
+																<a class="btn btn-primary pull-right js-addfile-click" id="btn-addfile" >Add file</a>
+	<div class="clearfix"><br/></div>
+															</div>	
+													</div>
+												</div>
+											</div>
+
+									</div>
+									<!-- Form page end -->
+
+								</div>
+								<!-- Page content end -->
+
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+
+
+
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+
+	<!-- Javascript files -->
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="js/jquery-ui.min.js"></script>
+	<!-- Date Time Picker JS -->
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
+	<!-- Bootstrap wysihtml5 JS -->
+	<script src="js/wysihtml5-0.3.0.js"></script>
+	<script src="js/prettify.js"></script>
+	<script src="js/bootstrap-wysihtml5.min.js"></script>
+
+	<!-- jQuery flot -->
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+	<script src="js/jquery.flot.min.js"></script>
+	<script src="js/jquery.flot.stack.min.js"></script>
+	<script src="js/jquery.flot.pie.min.js"></script>
+	<script src="js/jquery.flot.resize.min.js"></script>
+
+	<!-- Validate JS -->
+	<script src="js/jquery.validate.js"></script>
+	<!-- Form wizard steps  JS -->
+	<script src="js/jquery.steps.min.js"></script>
+	<!-- jQuery Knob -->
+	<script src="js/jquery.knob.js"></script>
+	<!-- jQuery Sparklines -->
+	<script src="js/jquery.sparklines.js"></script>
+	<!-- jQuery slim scroll -->
+	<script src="js/jquery.slimscroll.min.js"></script>
+	<!-- Data Tables JS -->
+	<script src="js/jquery.dataTables.min.js"></script>
+	<!-- Pretty Photo JS -->
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<!-- Rate It JS -->
+	<script src="js/jquery.rateit.min.js"></script>
+	<!-- Full calendar -->
+	<script src="js/moment.min.js"></script>
+	<script src="js/fullcalendar.min.js"></script>
+	<!-- jQuery gritter -->
+	<!--	<script src="js/jquery.gritter.min.js"></script> -->
+	<!-- jQuery gritter notification -->
+	<script src="js/custom.notification.js"></script>
+	<!-- Respond JS for IE8 -->
+	<script src="js/respond.min.js"></script>
+	<!-- HTML5 Support for IE -->
+	<script src="js/html5shiv.js"></script>
+
+	<!-- Javascript for this page -->
+	<script type="text/javascript">
+
+
+
+	</script>
+	<!--<script src="js/uploader.js"></script>-->
+	<!-- Custom JS -->
+	<script src="js/custom.js"></script>
+
+</body>
+
+</html>
