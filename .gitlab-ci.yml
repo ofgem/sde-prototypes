@@ -8,7 +8,7 @@ pages:
   - ls -latrh
   - echo "I am on gitlab-runner"
   - mkdir public
-  - find ./* -maxdepth 1 -mindepth 1 -not -name public -print0 | xargs -0 mv -f ./public
+  - find ./* -maxdepth 1 -mindepth 1 -not -name public -print0 | xargs -0 mv -f ./public/
   - ls -latrh
   artifacts:
     paths:
