@@ -4,16 +4,65 @@ Designed by : http://responsivewebinc.com
 
 /* Basic CSS starts */
 
+.navbar-inverse.nav-list{
+	background-color: #333;
+}
+.navbar-inverse{
+	background-color: #333;	
+}
+.nav-list li>a>img{
+	width:40px;
+	margin-right:10px;
+}
+.nav-list li>a>span{
+	color:#fff;
+	font-size: 1.3em;
+}
+.nav-list li{
+
+	border-right:1px solid rgb(80, 79, 79);
+}
+.nav-list li>a{
+	display:block;
+	opacity: 0.75;
+	padding:15px;
+}
+.nav-list li.active>a{
+	opacity: 1;;
+}
+.nav-list li>a:hover,
+.nav-list li>a:focus{
+	opacity: 1;
+}
+.nav-list{margin-bottom:0; padding-bottom:3px}
+/*search */
+/* nav bar search box - drop down menu button */
+.navbar .navbar-search .dropdown-menu { min-width: 25px; }
+.dropdown-menu .label-icon { margin-left: 5px; }
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.navbar-search>label{
+	padding:12px;
+	display:block;
+	background-color: darkgrey;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 100;
+	color:#000;
+}
+
 body{
 	font-size:14px;
 	line-height:24px;
 	-webkit-font-smoothing: antialiased;
-	background:#fafafa url("../img/main-back.png");
+	background:#fafafa;
 }
 
 h1,h2,h3,h4,h5,h6{
 	font-weight:normal;
-	margin:0px;
 	padding:0px;
 }
 

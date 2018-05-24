@@ -3,7 +3,7 @@
 
 <head>
 	<!-- Title here -->
-	<title>Data Exchange - home</title>
+	<title>Data Exchange - consumers</title>
 	<!-- Description, Keywords and Author -->
 	<meta name="description" content="Your description">
 	<meta name="keywords" content="Your,Keywords">
@@ -33,7 +33,9 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="#">
 	<style type="text/css">
-
+.media-object{
+	width:200px;
+}
 
 	</style>
 </head>
@@ -86,7 +88,7 @@
 
 
 				<ul class="navbar navbar-inverse nav-list list-inline" style="padding-left:30px">
-					<li><a href="consumers.html"><img src="img/consumers-inverse.png"><span class="hidden-xs">Consumers</span></a></li>
+					<li class="active"><a href="#"><img src="img/consumers-grey.png"><span class="hidden-xs">Consumers</span></a></li>
 					<li><a href="#"><img src="img/performance-inverse.png"><span class="hidden-xs">Supplier performance</span></a></li>
 					<li><a href="#"><img src="img/retail-inverse.png"><span class="hidden-xs">Retail</span></a></li>
 					<li><a href="#"><img src="img/tag-inverse.png"><span class="hidden-xs">Wholesale</span></a></li>
@@ -120,119 +122,98 @@
 							<div>
 
 									<div class="row">
-										<div class="jumbotron panel-primary" style="    background-color: #3B7AA1;
-										color: #F0F1F1;">
-											<div class="container">
-												<h2 style="margin-top:0">Welcome to the Data Exchange</h1>
-													<p>A secure place to exchange data in the Energy industry</p>
+										<div class="jumbotron" style="padding-top:40px;">
+												<div class="container">
+														<ol class="breadcrumb">
+															<li><a href="index.html">Home</a></li>
+															<li class="active">Consumers</li>
+														</ol>
+														<hr>
+				
+														
+												<h2 style="margin-top:0">Consumers</h1>
+													<p>Information and datasets about the energy needs of consumers in the UK</p>
 											</div>
 										</div>
 										</div>
 
-									<div class="row">
-											<p><br/></p>
-											<div class="login-page">
-
-													<!-- Nav tabs -->
-													<ul class="nav nav-tabs nav-justified">
-													  <li class="active"><a href="#login" data-toggle="tab" class="br-lblue"><i class="fa fa-sign-in"></i> Sign In</a></li>
-													  <li><a href="#register" data-toggle="tab" class="br-lblue"><i class="fa fa-pencil"></i> Sign Up</a></li>
-													  <li><a href="#contact" data-toggle="tab" class="br-lblue"><i class="fa fa-envelope"></i> Mail Us</a></li>
-													</ul>
-								
-													<!-- Tab panes -->
-													<div class="tab-content">
-													  <div class="tab-pane fade active in" id="login">
-													  
-														<!-- Login form -->
-														
-														<form role="form" action="index.html">
-														  <div class="form-group">
-															<label for="email">Email</label>
-															<input type="text" class="form-control" id="email" placeholder="Email">
-														  </div>
-														  <div class="form-group">
-															<label for="password">Password</label>
-															<input type="password" class="form-control" id="password" placeholder="Password">
-														  </div>
-														  <div class="checkbox hidden">
-															<label>
-															  <input type="checkbox"> Remember Me Next Time
-															</label>
-														  </div>
-														  <button type="submit" class="btn btn-info btn-lg">Sign in</button>
-														  <button type="reset" class="btn btn-default btn-lg">Reset</button>
-														</form>
-														
-													  </div>
-													  
-													  
-													  <div class="tab-pane fade" id="register">
-														<!-- Register form -->
-													  
-														<div class="alert alert-info">Please complete your details and click <strong>"Submit"</strong> to continue</div>
-														
-														<form role="form" action="index.html">
-														  <div class="form-group">
-															<label for="name">Full Name</label>
-															<input type="text" class="form-control" id="name" placeholder="Full Name">
-														  </div>
-														  <div class="form-group">
-															<label for="email">Email</label>
-															<input type="text" class="form-control" id="email" placeholder="Email">
-														  </div>
-														  <div class="form-group">
-															<label for="password">Password</label>
-															<input type="password" class="form-control" id="password" placeholder="Password">
-														  </div>
-														  <div class="form-group">
-															<label for="cpassword">Confirm Password</label>
-															<input type="cpassword" class="form-control" id="cpassword" placeholder="Confirm Password">
-														  </div>
-														  <div class="checkbox">
-															<label>
-															  <input type="checkbox"> Agree <a href="#">Terms &amp; Conditions</a>
-															</label>
-														  </div>
-														  <button type="submit" class="btn btn-info btn-sm">Submit</button>
-														  <button type="reset" class="btn btn-default btn-sm">Reset</button>
-														</form>
-													  
-													  </div>
-													  
-													  
-													  <div class="tab-pane fade" id="contact">
-														
-														<!-- Contact Form -->
-														
-														<form role="form" action="index.html">
-														  <div class="form-group">
-															<label for="name">Name</label>
-															<input type="text" class="form-control" id="name" placeholder="Name">
-														  </div>
-														  <div class="form-group">
-															<label for="email">Email</label>
-															<input type="text" class="form-control" id="email" placeholder="Email">
-														  </div>
-														  <div class="form-group">
-															<label for="message">Message</label>
-															<textarea rows="3" class="form-control"></textarea>
-														  </div>
-														  <button type="submit" class="btn btn-info btn-sm">Submit</button>
-														  <button type="reset" class="btn btn-default btn-sm">Reset</button>
-														</form>
-														
-													  </div>
+									<div class="container">
+											
+											<div class="media">
+													<div class="media-left">
+														<a href="#">
+															<img class="media-object" src="img/chart-view.png" alt="...">
+														</a>
 													</div>
+													<div class="media-body">
+														<div class="col-md-8">
+														<h4 class="media-heading">Debt Repayment plans</h4>
 													
-											 </div>
+																	<p>Dataset including debt plans made by customer types in the period 2017-2018 </p>
+																	<p><span class="label label-black">98,087</span> debt plans in the last year</p>
+																	<p style="margin-top:1em"><a href="#" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;<a href="#" class="js-signin">Sign in required</a></p>
+														</div>
+														<div class="col-md-4">
+																<div>Published</div>
+																<div><i class="fa fa-calendar"></i>&nbsp;17 April 2018</div>
+																<div class="text-muted">Next publish date</div>
+																<div><i class="fa fa-calendar text-warning"></i><span class="text-warning">&nbsp;12 April 2019</span></div>
+															</div>	
 
+													</div>
+												</div>
 
+												<hr>
+											
+												<div class="media">
+														<div class="media-left">
+															<a href="#">
+																<img class="media-object" src="img/chart-view.png" alt="...">
+															</a>
+														</div>
+														<div class="media-body">
+															<div class="col-md-8">
+															<h4 class="media-heading">Tariff switching</h4>
+														
+																		<p>Dataset including swithicng data in the period 2017-2018 </p>
+																		<p><span class="label label-black">409,192</span> switches in the last year</p>
+																		<p style="margin-top:1em"><a href="#" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;<a href="#" class="js-signin">Sign in required</a></p>
+															</div>
+															<div class="col-md-4">
+																	<div>Published</div>
+																	<div><i class="fa fa-calendar"></i>&nbsp;17 April 2018</div>
+																	<div class="text-muted">Next publish date</div>
+																	<div><i class="fa fa-calendar text-warning"></i><span class="text-warning">&nbsp;12 April 2019</span></div>
+																</div>	
 	
+														</div>
+													</div>
 
-
-
-
+													<hr>
+											
+													<div class="media">
+															<div class="media-left">
+																<a href="#">
+																	<img class="media-object" src="img/chart-view.png" alt="...">
+																</a>
+															</div>
+															<div class="media-body">
+																<div class="col-md-8">
+																<h4 class="media-heading">Debt Repayment plans</h4>
+															
+																			<p>Dataset including debt plans made by customer types in the period 2017-2018 </p>
+																			<p><span class="label label-black">1,000,999</span> switches in the last year</p>
+																			<p style="margin-top:1em"><a href="#" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;<a href="#" class="js-signin">Sign in required</a></p>
+																</div>
+																<div class="col-md-4">
+																		<div>Published</div>
+																		<div><i class="fa fa-calendar"></i>&nbsp;17 April 2018</div>
+																		<div class="text-muted">Next publish date</div>
+																		<div><i class="fa fa-calendar text-warning"></i><span class="text-warning">&nbsp;12 April 2019</span></div>
+																	</div>	
+		
+															</div>
+														</div>
 										</div>
 							  
 							  
