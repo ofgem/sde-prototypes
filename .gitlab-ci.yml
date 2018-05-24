@@ -4,6 +4,9 @@ pages:
   stage: deploy
   script:
   - echo 'Nothing to do...'
+  - pwd
+  - ls -latrh
+  - echo "I am on gitlab-runner"
   artifacts:
     paths:
     - public
