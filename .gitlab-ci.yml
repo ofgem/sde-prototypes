@@ -8,7 +8,6 @@ pages:
   - ls -latrh
   - echo "I am on gitlab-runner"
   - mkdir public
-  - shopt -s extglob
   - mv !(public) ./public
   - ls -latrh
   artifacts:
