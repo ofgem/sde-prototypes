@@ -148,6 +148,7 @@
 											<button type="button" class="btn btn-primary btn-xs btn-tag">Small business</button>
 											<button type="button" class="btn btn-info btn-xs btn-tag">Billing</button>
 											<button type="button" class="btn btn-info btn-xs btn-tag">Customer service</button>
+											<button type="button" class="btn btn-info btn-xs btn-tag">Smart meter</button>
 											</p>
 										  </div>
 										</div>
@@ -168,8 +169,8 @@
 													
 																	<p>Dataset including debt plans made by customer types in the period 2017-2018 </p>
 
-																	<p class="text-right"><span class="badge badge-primary hidden">All</span>
-																		<span class="badge badge-primary">Vulnerable customers</span>
+																	<p class="text-right"><span class="badge badge-primary hidden">All consumers</span>
+																		<span class="badge badge-primary">Vulnerable consumers</span>
 																		<span class="badge badge-info">Customer service</span>
 																		</p>	
 																	<p style="margin-top:1em"><a href="#" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;</p>
@@ -179,7 +180,7 @@
 																<div>Status</div>
 																<div>In progress</div>
 																<div>Due to be published</div>
-																<div><i class="fa fa-calendar"></i>&nbsp;30 July 2018</div>
+																<div><i class="fa fa-calendar"></i>&nbsp;30 August 2018</div>
 															</div>	
 
 													</div>
@@ -199,8 +200,8 @@
 															<h4 class="media-heading">Tariff switching</h4>
 														
 																		<p>Dataset including switching data in the period 2017-2018 </p>
-																		<p class="text-right"><span class="badge badge-primary hidden">All</span>
-																			<span class="badge badge-primary">Vulnerable customers</span>
+																		<p class="text-right"><span class="badge badge-primary hidden">All consumers</span>
+																			<span class="badge badge-primary">Vulnerable consumers</span>
 																			<span class="badge badge-info">Billing</span>
 																			</p>
 
@@ -228,13 +229,13 @@
 													</div>
 													<div class="media-body">
 														<div class="col-md-8">
-														<h4 class="media-heading">Debt Repayment plans</h4>
+														<h4 class="media-heading">Self disconnections</h4>
 													
-																	<p>Dataset including debt plans made by customer types in the period 2017-2018 </p>
+																	<p>Dataset including self disconnctions by customer types in the period 2017-2018 </p>
 
-																	<p class="text-right"><span class="badge badge-primary hidden">All</span>
+																	<p class="text-right"><span class="badge badge-primary hidden">All consumers</span>
 																		<span class="badge badge-primary">Vulnerable customers</span>
-																		<span class="badge badge-info">Customer service</span>
+																		<span class="badge badge-info">Billing</span>
 																		</p>	
 																	<p style="margin-top:1em"><a href="#" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;</p>
 														</div>
@@ -243,12 +244,44 @@
 																<div>Status</div>
 																<div>In progress</div>
 																<div>Due to be published</div>
-																<div><i class="fa fa-calendar"></i>&nbsp;30 July 2018</div>
+																<div><i class="fa fa-calendar"></i>&nbsp;06 July 2018</div>
 															</div>	
 
 													</div>
 												</div>
 	
+												<hr>
+											
+												<div class="media" id="data4">
+														<div class="media-left">
+															<a href="#">
+																<img class="media-object" src="img/chart-view.png" alt="...">
+															</a>
+															<p><span class="label label-black">98,087</span> debt plans</p>
+														</div>
+														<div class="media-body">
+															<div class="col-md-8">
+															<h4 class="media-heading">Smart meter rollouts</h4>
+														
+																		<p>Dataset including smart meters by customer types in the period 2017-2018 </p>
+	
+																		<p class="text-right"><span class="badge badge-primary hidden">All consumers</span>
+																			<span class="badge badge-primary">Small business</span>
+																			<span class="badge badge-info">Billing</span>
+																			</p>	
+																		<p style="margin-top:1em"><a href="#" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;</p>
+															</div>
+	
+															<div class="col-md-4">
+																	<div>Status</div>
+																	<div>In progress</div>
+																	<div>Due to be published</div>
+																	<div><i class="fa fa-calendar"></i>&nbsp;06 July 2018</div>
+																</div>	
+	
+														</div>
+													</div>
+
 													<hr>
 										</div>
 							  
@@ -323,13 +356,15 @@
          
  
 $(".btn-tag").click(function(eventObject) {
-	alert("click");
     var tag = $(this).html();
-    var totalPanel = document.getElementsByClassName(“media”).length;
+    var totalPanel = document.getElementsByClassName("media").length;
+
     eventObject.preventDefault();
     for (var x = 1; x <= totalPanel; x++  ){
+
       //console.log("json: " + JSON.stringify($(“#data” + x ).html()));
-      if(JSON.stringify($(“#data” + x ).html()).indexOf(tag) >= 0 ){
+      if(JSON.stringify($("#data" + x ).html()).indexOf(tag) >= 0 ){
+
         //console.log( JSON.stringify($(“#data” + x ).html()) );
         $("#data" + x ).hide();
         $("#data" + x ).fadeIn();
