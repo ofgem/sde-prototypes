@@ -36,7 +36,10 @@
 .media-object{
 	width:200px;
 }
-
+.form-control-static{
+	padding-left:20px;
+	padding-right:5px;
+}
 	</style>
 </head>
 
@@ -121,7 +124,7 @@
 
 							<div>
 									<div class="row">
-											<div class="jumbotron" style="padding-top:40px;">
+											<div class="jumbotron" style="padding-top:40px;;; margin-bottom: 0">
 													<div class="container">
 															<ol class="breadcrumb">
 																<li><a href="index.html">Home</a></li>
@@ -129,10 +132,17 @@
 																<li class="active">Meters</li>
 															</ol>
 															<hr>
-					
-															
+													<div class="row">
+													<span class="col-sm-8">		
 													<h2 style="margin-top:0">Meter installations in homes and businesses</h1>
-														<p>Information and datasets about the energy needs of consumers in the UK</p>
+														<p>Information and datasets about the meter installations for consumers in the UK</p>
+													</span>
+													<span class="col-sm-4">
+														<div class="well" style="margin-bottom: 0">
+															Data owner: <br/><a href="#">Alex Seyward</a>			
+														</div>
+													</span>
+													</div>
 												</div>
 											</div>
 											</div>
@@ -146,6 +156,7 @@
 	<div class="panel">
 		<div class="panel-body">
 				<form class="form-inline">
+						<span class="form-control-static">Filer by:</span>
 				<span class="form-control-static">Meter type</span>
 		<select class="form-control">
 			<option>All meters</option>
@@ -176,18 +187,16 @@
 						<option>Domestic</option>
 						<option>Non Domestic</option>
 					  </select>
-					  <span class="form-control-static">Year</span>	  
-					  <select class="form-control">
-							<option>2018</option>
-							<option>2017</option>
-							<option>2016</option>
-							<option>2015</option>	
-							<option>2014</option>
-						  </select>
-			  </form>
-			  <form class="form-inline">
-					<a href="#" class="btn btn-primary"><i class="fa fa-download"></i>&nbsp; Download data</a>	
 
+			  </form>
+			  <p style="margin-top:15px;">
+			  <form class="form-inline">
+					<span class="form-control-static">Show data by: </span>
+					<a class="form-control-static" class="#">Year</a> /<a class="form-control-static" class="#">Month</a>
+					<a href="#" class="btn btn-primary pull-right" style="margin-right: 20px;"><i class="fa fa-download"></i>&nbsp; Download data</a>	
+					
+				</form>	
+</p>
 					<table class="table">
 <tbody>
 
@@ -219,6 +228,17 @@
 </tbody>
 
 					</table>
+
+
+					<ul class="pagination pagination-xs pull-right">
+							<li><a href="#">«</a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">»</a></li>
+						</ul>
 		</div>
 	  </div>
 	</div>
