@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Title here -->
+	<title>Sprint 2 - Data Exchange -landing</title>
+	<!-- Description, Keywords and Author -->
+	<meta name="description" content="Your description">
+	<meta name="keywords" content="Your,Keywords">
+	<meta name="author" content="ResponsiveWebInc">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Styles -->
+	<!-- Form Wizard Steps CSS -->
+	<link href="css/steps.css" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- jQuery gritter -->
+	<link href="css/jquery.gritter.css" rel="stylesheet">
+	<!-- Font awesome CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+	<!-- Custom Color CSS -->
+	<link href="css/less-style.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/checkboxes.css" rel="stylesheet">
+	<link href="css/uploader.css" rel="stylesheet">
+	<link href="css/fc.css" rel="stylesheet">
+    <link href="css/calendar.css" rel="stylesheet">
+   <link href="css/custom.css" rel="stylesheet"> 
+    
+	<!-- Favicon -->
+
+
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="#">
+	<style type="text/css">
+
+
+	</style>
+</head>
+
+<body>
+
+	<div class="container-fluid">
+
+
+
+		<div >
+			<div>
+
+				<div class="row">
+                        <div class="col-sm-3" >
+                                <div class="navbar navbar-inverse navbar-default navbar-fixed-side" style="margin-right: 15px;">
+                                        <div class="container">
+                                                <div class="navbar-header">
+                                                  <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                                                    <span class="sr-only">Toggle navigation</span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                  </button>
+                                                  <a class="navbar-brand" href="index.html"><img src="img/ofgem-logo.png"  style="height:30px; margin-top:-6px" class="pull-left"/><span class="pull-left">&nbsp;&nbsp;Data Exchange</span></a>
+                                                </div>
+                                                <div class="collapse navbar-collapse">
+                                                  <ul class="nav navbar-nav">
+                                                    <li class="active">
+                                                      <a href="./"><i class="fa fa-home"></i>&nbsp;<i class="fa  fa-angle-right"></i>&nbsp;Your data</a>
+                                                    </li>
+            
+                                                    <li class="dropdown active">
+                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interruptions Incentice Scheme (IIS) <b class="caret"></b></a>
+                                                        <ul class="dropdown-menu"><li class="active"><a href="iis-data.html">Current</a></li>
+                                                    <li><a href="#">Previous</a></li>
+                                    
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown">
+                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">QoS Guaranteed standards <b class="caret"></b></a>
+                                                        <ul class="dropdown-menu"><li><a href="iis-data.html">Current</a></li>
+                                                    <li><a href="#">Previous</a></li>
+                                
+                                                    </ul>
+                                                </li>
+                                                  </ul>
+                                                  <ul class="nav navbar-nav collapse navbar-collapse">
+                                                        <li><strong style="color: #9d9d9d">Find datasets</strong></li>
+        
+                                                  </ul>
+                                                  <form class="navbar-form navbar-left">
+                                                    <div class="form-group">
+                                                      <input class="form-control" placeholder="Search">
+                                                    </div>
+                                                    <button class="btn btn-default">Search</button>
+                                                  </form>
+                                                  <ul class="nav navbar-nav navbar-right" style="display:none">
+                                                    <li><a href="#">Page 4</a></li>
+                                                  </ul>
+        
+                                                </div>
+                                              </div>
+                                      </div>
+                            </div>
+
+
+					<div class="col-sm-9 ">
+                            <div>
+                                <!-- Modal Success Popup -->
+                                <div class="modal fade" id="popup-confirmation" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content" id="popup-warning-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title text-center">
+                                                        There were issues reading the data</h4>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <i class="fa fa-3x fa-exclamation-circle warning"></i>
+                                                <p class="lead">Data was received, but there were some issues. 
+                                                    Please review the issues and re-upload if necessary</p>
+                                                <p>The receipt number is: <span class="label label-info">IIS-6752-1</span></p>
+                                                <p><br/></p>
+                                                <a href="#" class="btn btn-default" id="btn-close-confirmation" data-dismiss="modal">Close</a>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="modal-content" id="popup-success-content" style="display:none">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                    <h4 class="modal-title text-center">Your data has been uploaded </h4>
+                                                </div>
+                                                <div class="modal-body text-center">
+                                                    <i class="fa fa-3x fa-check-circle-o success"></i>
+                                                    <p>The receipt number is: <span class="label label-info">IIS-6752-2</span></p>
+                                                    <p><br/></p>
+                                                    <a href="#" class="btn btn-default" id="btn-close-confirmation" data-dismiss="modal">Close</a>
+                                                </div>
+        
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-sm-12" id="js-existing-submissions">
+    
+                                        <h2><a href="landing.html">Networks submissions</a> <i class="fa fa-angle-right"></i> IIS Yearly
+                                                <a href="#" class="btn pull-right" style="margin-right:20px" id="btn-upload-data">
+                                                        <i class="fa fa-plus"></i> Add updated version</a>
+                                            <a href="#" class="btn btn-primary pull-right" style="margin-right:20px" id="btn-upload-version">
+                                                <i class="fa fa-upload"></i> Upload new data</a>
+    
+                                        </h2>
+                                        <div class="row">
+                                            <div class="col-sm-2" style="padding-left:40px"><a href="#">Status</a></div>
+                                            <div class="col-sm-4"></div>
+                                            <div class="col-sm-2"><a href="#">Date</a></div>
+                                            <div class="col-sm-2"><a href="#">Receipt</a></div>
+                                            <div class="col-sm-2"></div>
+                                        </div>
+    
+
+                                        <div class="panel panel-default pnl-after-upload"  style="display:none">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                        <div class="col-sm-6">
+                                                                <span class="badge badge-warning pull-left">Action needed</span>
+                                                
+                                                        <h3 class="pull-left">
+                                                            <a href="#">&nbsp;IIS 2017-2018 </a>
+                                                        </h3>
+                                                    </div>
+    
+                                                    <div class="col-sm-2">25 April 2018</div>
+    
+                                                    <div class="col-sm-2">IIS-6752-1</div>
+                                                    <div class="col-sm-2">
+                                                            <a href="#" class="btn btn-link"><i href="fa fa-download"></i>Download</a>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-10 col-sm-push-2" style="border-bottom:2px silver">
+                                                        <h4 style="margin-top:0.5em">3 Issues found</h4>
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                    <i class="fa fa-warning"></i>
+                                                                Row 459
+                                                            </div>
+                                                            <div class="col-sm-9">
+                                                                Invalid date, should be in the format dd/mm/yy, such as 31/03/2018
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                                <div class="col-sm-2">
+                                                                        <i class="fa fa-warning"></i>
+                                                                    
+                                                                    Row 1098
+                                                                </div>
+                                                                <div class="col-sm-9">
+                                                                    Status Type needs to match list of allowed, such as [Ordered, Installed, Returned]
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                    <div class="col-sm-2">
+                                                                            <i class="fa fa-warning"></i>
+                                                                        
+                                                                        Row 2091
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        Invalid date, should be in the format dd/mm/yy, such as 31/03/2018
+                                                                    </div>
+                                                                </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default pnl-after-upload" style="display:none">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                            <div class="col-sm-6">
+                                                            <span class="badge pull-left badge-primary">Submitted</span>
+                                                    
+                                                            <h3 class="pull-left">
+                                                                <a href="#">&nbsp;Statement of facts </a>
+                                                            </h3>
+                                                        </div>
+        
+                                                        <div class="col-sm-2">08 April 2018</div>
+        
+                                                        <div class="col-sm-2">IIS-6752-1</div>
+                                                        <div class="col-sm-2">
+                                                                <a href="#" class="btn btn-link"><i href="fa fa-download"></i>Download</a>
+                                                            </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-10 col-sm-push-2" style="border-bottom:2px silver">
+                                                            <div class="row">
+                                                                <div class="col-sm-9">
+                                                                        <i class="fa fa-check"></i>
+                                                                    2 records imported successfully
+                                                                </div>
+    
+                                                            </div>
+    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                        <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                            <div class="col-sm-6">
+                                                            <span class="badge pull-left badge-success pull-left">Accepted</span>
+                                                            <h3 class="pull-left">
+                                                                <a href="#">&nbsp;Exceptional Event Notification </a>
+                                                            </h3>
+                                                        </div>
+        
+                                                        <div class="col-sm-2">31 March 2018</div>
+        
+                                                        <div class="col-sm-2">IIS-6734-1</div>
+                                                        <div class="col-sm-2">
+                                                                <a href="#" class="btn btn-link"><i href="fa fa-download"></i>Download</a>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                                <div class="col-sm-6">
+                                                                <span class="badge pull-left badge-success">Accepted</span>
+                                                        
+                                                                <h3 class="pull-left">
+                                                                    <a href="#">&nbsp;Statement of facts</a>
+                                                                </h3>
+                                                            </div>
+            
+                                                            <div class="col-sm-2">31 March 2018</div>
+            
+                                                            <div class="col-sm-2">IIS-3478-2</div>
+                                                            <div class="col-sm-2">
+                                                                    <a href="#" class="btn btn-link"><i href="fa fa-download"></i>Download</a>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="panel panel-default">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                    <span class="badge pull-left badge-success">Accepted</span>
+                                                            
+                                                                    <h3 class="pull-left">
+                                                                        <a href="#">&nbsp;Exceptional Event Notification </a>
+                                                                    </h3>
+                                                                </div>
+                
+                                                                <div class="col-sm-2">20 December 2017</div>
+                
+                                                                <div class="col-sm-2">IIS-6821-1</div>
+                                                                <div class="col-sm-2">
+                                                                        <a href="#" class="btn btn-link"><i href="fa fa-download"></i>Download</a>
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel panel-default">
+                                                            <div class="panel-body">
+                                                                <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                        <span class="badge pull-left badge-success">Accepted</span>
+                                                                
+                                                                        <h3 class="pull-left">
+                                                                            <a href="#">&nbsp;Statement of facts</a>
+                                                                        </h3>
+                                                                    </div>
+                    
+                                                                    <div class="col-sm-2">23 December 2017</div>
+                    
+                                                                    <div class="col-sm-2">IIS-3097-1</div>
+                                                                    <div class="col-sm-2">
+                                                                            <a href="#" class="btn btn-link"><i href="fa fa-download"></i>Download</a>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                            <span class="badge pull-left badge-success">Accepted</span>
+                                                                    
+                                                                            <h3 class="pull-left">
+                                                                                <a href="#">&nbsp;IIS 2016-2017</a>
+                                                                            </h3>
+                                                                        </div>
+                        
+                                                                        <div class="col-sm-2">30 April 2017</div>
+                        
+                                                                        <div class="col-sm-2">IIS-3097-1</div>
+                                                                        <div class="col-sm-2">
+                                                                                <a href="#" class="btn btn-link"><i href="fa fa-download"></i>Download</a>
+                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div> 
+                                    </div>
+    
+    
+    
+    
+    
+                                    <div class="col-sm-12" id="js-form-submit-data" style="display:none">
+    
+                                        <div class="row">
+    
+    
+                                            <!-- Form page -->
+                                            <div class="page-form col-sm-9">
+                                                    <!-- Form Content -->
+                                                    <h2>Upload file</h2>
+        
+                                                    <!-- Form wizard content -->
+        
+                                                    <div id="wizard" role="application" class="wizard clearfix">
+                                                        <!-- Heading -->
+                                                        <h2>Step 1 - Confirm Data</h2>
+                                                        <!-- First step form content -->
+        
+                                                        <div>
+                                                            <form id="form-2" action="#" class="form-horizontal">
+    
+                                                                    <div class="row">
+                                                                            <div class="col-sm-12">
+                                                                                    What type of data are you uploading?
+                                                                                </div>	
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-check radio">
+                                                                                    <label>
+                                                                                        <input type="radio" name="data-type" checked>
+                                                                                        <span class="label-text">IIS (Yearly)</span>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="form-check radio">
+                                                                                    <label>
+                                                                                        <input type="radio" name="data-type">
+                                                                                        <span class="label-text">Statement of facts</span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-check radio">
+                                                                                    <label>
+                                                                                        <input type="radio" name="data-type">
+                                                                                        <span class="label-text">Event notification</span>
+                                                                                    </label>
+                                                                                </div>
+ 
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                        How do you want to upload the data?
+                                                                                    </div>	
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-check checkbox">
+                                                                                        <label>
+                                                                                            <input type="radio" name="toggle" checked>
+                                                                                            <span class="label-text">Submit file online</span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="form-check  checkbox">
+                                                                                        <label>
+                                                                                            <input type="radio" name="toggle">
+                                                                                            <span class="label-text">Use an API</span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-check  checkbox">
+                                                                                        <label>
+                                                                                            <input type="radio" name="toggle">
+                                                                                            <span class="label-text">sFTP</span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="form-check  checkbox">
+                                                                                        <label>
+                                                                                            <input type="radio" name="toggle">
+                                                                                            <span class="label-text">Huddle</span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-check  checkbox">
+                                                                                        <label>
+                                                                                            <input type="radio" name="toggle">
+                                                                                            <span class="label-text">Email</span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>																	
+    
+                                                            </form>
+                                                        </div>
+                                                        <!-- First section End -->
+        
+                                                        <!-- Heading -->
+                                                        <h2>Step 2 - Upload Files</h2>
+        
+                                                        <!-- Second step form content -->
+                                                        <div>
+                                                            <!-- Upload  -->
+                                                            <form id="frm-upload">
+                            <h4 class="pnl-during-upload">Upload files</h4>
+                            <div class="row pnl-before-upload">
+                                    <div class="col-sm-4">
+                                        <p>1. Prepare with 
+                                            <a href="#" class="btn-link">agreed template</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p>2. Drag files or choose <strong>Add file</strong> below</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p>3. Check the status, and fix any issues</p>
+                                    </div>
+                                </div>
+                                <div class="row pnl-during-upload">
+                                        <div class="col-sm-12">
+                                            <p>Uploading <strong>2</strong> files</p>
+                                        </div>
+                                    </div>
+                                                                    <div class="progress skill-bar " id="progress-1" style="display:none"><!-- progress-bar-info progress-bar-warning progress-bar-danger -->
+                                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                                                <span class="skill">IIS 2017-2018 Part 1.csv
+                                                                                    <i class="val pnl-after-upload" style="display:none">Success</i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="progress skill-bar " id="progress-1" style="display:none"><!-- progress-bar-info progress-bar-warning progress-bar-danger -->
+                                                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                                                                <span class="skill">IIS 2017-2018 Part 2.csv
+                                                                                    <i class="val  pnl-after-upload"  style="display:none">3 Issues</i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>		
+                                        <div class="well well-lg js-addfile-click" id="pnl-addfile" style="background-color: silver; cursor:copy">
+                                                <span class="col-sm-12 text-center"><i class="fa fa-download fa-3x" aria-hidden="true"></i></span>
+                                                <h3 class="text-center">Add file or drag and drop files here</h3>
+    
+                                        </div>
+                
+    
+                
+                                                            </form>
+                                                            <div class="well">
+                                                                    <a class="btn" style="display:none">Cancel</a>
+                                                                    <a class="btn btn-primary pull-right js-addfile-click" id="btn-addfile" >Add file</a>
+        <div class="clearfix"><br/></div>
+                                                                </div>	
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                        </div>
+                                        <!-- Form page end -->
+    
+                                    </div>
+                                    <!-- Page content end -->
+    
+                                </div>
+    
+    
+                            </div>
+                        </div>
+                    
+
+				</div>
+
+
+
+			</div>
+
+
+
+
+			<div class="clearfix"></div>
+		</div>
+	</div>
+   
+	<!-- Javascript files -->
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="js/jquery-ui.min.js"></script>
+	<!-- Date Time Picker JS -->
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
+	<!-- Bootstrap wysihtml5 JS -->
+	<script src="js/wysihtml5-0.3.0.js"></script>
+	<script src="js/prettify.js"></script>
+	<script src="js/bootstrap-wysihtml5.min.js"></script>
+
+	<!-- jQuery flot -->
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+	<script src="js/jquery.flot.min.js"></script>
+	<script src="js/jquery.flot.stack.min.js"></script>
+	<script src="js/jquery.flot.pie.min.js"></script>
+	<script src="js/jquery.flot.resize.min.js"></script>
+
+	<!-- Validate JS -->
+	<script src="js/jquery.validate.js"></script>
+	<!-- Form wizard steps  JS -->
+	<script src="js/jquery.steps.min.js"></script>
+	<!-- jQuery Knob -->
+	<script src="js/jquery.knob.js"></script>
+	<!-- jQuery Sparklines -->
+	<script src="js/jquery.sparklines.js"></script>
+	<!-- jQuery slim scroll -->
+	<script src="js/jquery.slimscroll.min.js"></script>
+	<!-- Data Tables JS -->
+	<script src="js/jquery.dataTables.min.js"></script>
+	<!-- Pretty Photo JS -->
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<!-- Rate It JS -->
+	<script src="js/jquery.rateit.min.js"></script>
+	<!-- Full calendar -->
+	<script src="js/moment.min.js"></script>
+	<script src="js/fullcalendar.min.js"></script>
+	<!-- jQuery gritter -->
+	<!-- needed for notifications -->
+	<!--
+	<script src="js/jquery.gritter.min.js"></script>
+	-->
+	<!-- jQuery gritter notification -->
+	<script src="js/custom.notification.js"></script>
+	<!-- Respond JS for IE8 -->
+	<script src="js/respond.min.js"></script>
+	<!-- HTML5 Support for IE -->
+	<script src="js/html5shiv.js"></script>
+
+	<!-- Javascript for this page -->
+	<script type="text/javascript">
+
+
+
+	</script>
+	<script src="js/uploader.js"></script>
+	<!-- Custom JS -->
+	<script src="js/custom.js"></script>
+
+</body>
+
+</html>

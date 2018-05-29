@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Title here -->
+	<title>Data Exchange - consumers</title>
+	<!-- Description, Keywords and Author -->
+	<meta name="description" content="Your description">
+	<meta name="keywords" content="Your,Keywords">
+	<meta name="author" content="ResponsiveWebInc">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Styles -->
+		<!-- Form Wizard Steps CSS -->
+	<link href="css/steps.css" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- jQuery gritter -->
+	<link href="css/jquery.gritter.css" rel="stylesheet">
+	<!-- Font awesome CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+	<!-- Custom Color CSS -->
+	<link href="css/less-style.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet">
+<link href="css/checkboxes.css" rel="stylesheet">
+<link href="css/uploader.css" rel="stylesheet">
+
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="#">
+	<style type="text/css">
+.media-object{
+	width:200px;
+}
+
+	</style>
+</head>
+
+<body>
+
+
+
+							<nav class="navbar navbar-default" role="navigation" style="margin: 0">
+									<div class="container-fluid">							
+									<div class="navbar-header">
+										 
+										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#user-navbar">
+											 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+										</button> 
+										<a class="navbar-brand" href="index.html"><img src="img/ofgem-logo.png"  style="height:30px; margin-top:-6px" class="pull-left"/><span class="pull-left">&nbsp;&nbsp;Data Exchange</span></a>
+									</div>
+
+									<div>
+											<div class="collapse navbar-collapse" id="user-navbar">
+													<ul class="nav navbar-nav navbar-right">
+													  <li><a href="#">Release calendar <span class="sr-only">(current)</span></a></li>
+													  <li><a href="#">Methodology</a></li>
+													  <li class="active"><a href="#">Sign in</a></li>
+													  <li class="dropdown hidden">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>&nbsp; Alice Smith<span class="caret"></span></a>
+														<ul class="dropdown-menu">
+														  <li><a href="#">Add dataset</a></li>
+														  <li><a href="#">Send message</a></li>
+														  <li><a href="#">Calendar</a></li>
+														  <li role="separator" class="divider"></li>
+														  <li><a href="#">Organisation</a></li>
+														  <li role="separator" class="divider"></li>
+														  <li><a href="#">Profile</a></li>
+														</ul>
+													  </li>
+													</ul>
+													
+													
+												  </div><!-- /.navbar-collapse -->
+											</div>
+					</div>
+								</nav>
+						
+
+
+
+
+								<div class="container-fluid" style="padding:0">
+
+
+				<ul class="navbar navbar-inverse nav-list list-inline" style="padding-left:30px">
+					<li><a href="consumers.html"><img src="img/consumers-grey.png"><span class="hidden-xs">Consumers</span></a></li>
+					<li><a href="#"><img src="img/performance-inverse.png"><span class="hidden-xs">Supplier performance</span></a></li>
+					<li><a href="#"><img src="img/retail-inverse.png"><span class="hidden-xs">Retail</span></a></li>
+					<li><a href="#"><img src="img/tag-inverse.png"><span class="hidden-xs">Wholesale</span></a></li>
+					<li><a href="#"><img src="img/network-inverse.png"><span class="hidden-xs">Networks</span></a></li>
+					<li><a href="#"><img src="img/A-Z-inverse.png"><span class="hidden-xs">A-Z</span></a></li>
+					
+				</ul>
+
+	
+				<nav class="navbar navbar-default navbar-inverse" style="padding:9px 0; margin-bottom:0">
+						<div class="nav nav-justified navbar-nav">
+				 
+							<form class="navbar-form navbar-search " role="search" style="border:0">
+								<label class="label-large col-md-4 col-sm-6  hidden-xs col-md-offset-1">Search for a keyword or dataset by name</label>
+
+								<div class="input-group col-sm-6">
+									<input type="text" class="form-control input-lg" style="background-color: #e4e4e4">
+								
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-search btn-warning btn-lg">
+											<span class="fa fa-search"></span>
+											<span class="label-icon">Search</span>
+										</button>
+									</div>
+								</div>  
+							</form>   
+						 
+						</div>
+					</nav>
+
+							<div>
+
+									<div class="row">
+										<div class="jumbotron" style="padding-top:40px;">
+												<div class="container">
+														<ol class="breadcrumb">
+															<li><a href="index.html">Home</a></li>
+															<li class="active"></li>
+														</ol>
+														<hr>
+				
+														
+												<h2 style="margin-top:0">Your subscribed datasets</h1>
+													<p>Information and datasets you are subscribed to</p>
+											</div>
+										</div>
+										</div>
+
+									<div class="container">
+
+										<div class="row">
+										<div class="col-sm-12">
+											<p>Filter by :
+											<button type="button" class="btn btn-default btn-xs btn-tag">All consumers</button>
+											<button type="button" class="btn btn-primary btn-xs btn-tag">Vulnerable consumers</button>
+											<button type="button" class="btn btn-primary btn-xs btn-tag">Private renters</button>
+											<button type="button" class="btn btn-primary btn-xs btn-tag">Small business</button>
+											<button type="button" class="btn btn-info btn-xs btn-tag">Billing</button>
+											<button type="button" class="btn btn-info btn-xs btn-tag">Customer service</button>
+											<button type="button" class="btn btn-info btn-xs btn-tag">Smart meter</button>
+											</p>
+										  </div>
+										</div>
+<p><br/></p>
+										<div class="row">
+											<div class="col-sm-12">
+
+												<hr>
+											
+												<div class="media" id="data4">
+														<div class="media-left">
+															<a href="smart-meter-rollout.html">
+																<img class="media-object" src="img/chart-view.png" alt="...">
+															</a>
+															<p><span class="label label-black">998,087</span> smart meters</p>
+														</div>
+														<div class="media-body">
+															<div class="col-md-8">
+															<h4 class="media-heading">Smart and Prepayment meter rollouts</h4>
+														
+																		<p>Dataset including smart meters by customer types in the period 2017-2018 </p>
+	
+																		<p class="text-right"><span class="badge badge-primary hidden">All consumers</span>
+																			<span class="badge badge-primary">Small business</span>
+																			<span class="badge badge-info">Billing</span>
+																			</p>	
+																		<p style="margin-top:1em"><a href="smart-meter-rollout.html" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;</p>
+															</div>
+	
+															<div class="col-md-4">
+																	<div>Status</div>
+																	<div>In progress</div>
+																	<div>Due to be published</div>
+																	<div><i class="fa fa-calendar"></i>&nbsp;06 July 2018</div>
+																</div>	
+	
+														</div>
+													</div>
+												<hr>
+											<div class="media" id="data1">
+													<div class="media-left">
+														<a href="#">
+															<img class="media-object" src="img/chart-view.png" alt="...">
+														</a>
+														<p><span class="label label-black">98,087</span> debt plans</p>
+													</div>
+													<div class="media-body">
+														<div class="col-md-8">
+														<h4 class="media-heading">Debt Repayment plans</h4>
+													
+																	<p>Dataset including debt plans made by customer types in the period 2017-2018 </p>
+
+																	<p class="text-right"><span class="badge badge-primary hidden">All consumers</span>
+																		<span class="badge badge-primary">Vulnerable consumers</span>
+																		<span class="badge badge-info">Customer service</span>
+																		</p>	
+																	<p style="margin-top:1em"><a href="#" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;</p>
+														</div>
+
+														<div class="col-md-4">
+																<div>Status</div>
+																<div>In progress</div>
+																<div>Due to be published</div>
+																<div><i class="fa fa-calendar"></i>&nbsp;30 August 2018</div>
+															</div>	
+
+													</div>
+												</div>
+
+												<hr>
+											
+												<div class="media"  id="data2">
+														<div class="media-left">
+															<a href="#">
+																<img class="media-object" src="img/chart-view.png" alt="...">
+															</a>
+															<p><span class="label label-black">409,192</span> switches</p>
+														</div>
+														<div class="media-body">
+															<div class="col-md-8">
+															<h4 class="media-heading">Tariff switching</h4>
+														
+																		<p>Dataset including switching data in the period 2017-2018 </p>
+																		<p class="text-right"><span class="badge badge-primary hidden">All consumers</span>
+																			<span class="badge badge-primary">Vulnerable consumers</span>
+																			<span class="badge badge-info">Billing</span>
+																			</p>
+
+																		
+																		<p style="margin-top:1em"><a href="#" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;</p>
+															</div>
+															<div class="col-md-4">
+																	<div>Status</div>
+																	<div>In progress</div>
+																	<div>Due to be published</div>
+																	<div><i class="fa fa-calendar"></i>&nbsp;17 August 2018</div>
+																</div>
+	
+														</div>
+													</div>
+
+													<hr>
+											
+											<div class="media" id="data3">
+													<div class="media-left">
+														<a href="#">
+															<img class="media-object" src="img/chart-view.png" alt="...">
+														</a>
+														<p><span class="label label-black">98,087</span> debt plans</p>
+													</div>
+													<div class="media-body">
+														<div class="col-md-8">
+														<h4 class="media-heading">Self disconnections</h4>
+													
+																	<p>Dataset including self disconnctions by customer types in the period 2017-2018 </p>
+
+																	<p class="text-right"><span class="badge badge-primary hidden">All consumers</span>
+																		<span class="badge badge-primary">Vulnerable customers</span>
+																		<span class="badge badge-info">Billing</span>
+																		</p>	
+																	<p style="margin-top:1em"><a href="#" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;Request access to dataset</a> &nbsp;</p>
+														</div>
+
+														<div class="col-md-4">
+																<div>Status</div>
+																<div>In progress</div>
+																<div>Due to be published</div>
+																<div><i class="fa fa-calendar"></i>&nbsp;06 July 2018</div>
+															</div>	
+
+													</div>
+												</div>
+	
+												<div class="media" style="padding-top:30px;">
+														<div class="media-left" style="width:200px;">
+															<i class="fa fa-3x fa-plus"></i>
+														</div>
+														<div class="media-body">
+															<div class="col-md-8">
+															<h4 class="media-heading">Add dataset</h4>
+														
+																		<p>Search or browse for datasets at the top of this page &nbsp;</p>
+															</div>
+
+	
+														</div>
+													</div>
+
+													<hr>
+										</div>
+							  
+							  
+							</div>
+						</div>
+						</div>
+
+
+
+			</div>
+
+
+
+
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+		<!-- Javascript files -->
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- jQuery UI -->
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- Date Time Picker JS -->
+		<script src="js/bootstrap-datetimepicker.min.js"></script>
+		<!-- Bootstrap wysihtml5 JS -->
+		<script src="js/wysihtml5-0.3.0.js"></script>
+		<script src="js/prettify.js"></script>
+		<script src="js/bootstrap-wysihtml5.min.js"></script>
+
+		<!-- jQuery flot -->
+		<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+		<script src="js/jquery.flot.min.js"></script>
+		<script src="js/jquery.flot.stack.min.js"></script>
+		<script src="js/jquery.flot.pie.min.js"></script>
+		<script src="js/jquery.flot.resize.min.js"></script>
+
+		<!-- Validate JS -->
+		<script src="js/jquery.validate.js"></script>
+		<!-- Form wizard steps  JS -->
+		<script src="js/jquery.steps.min.js"></script>
+		<!-- jQuery Knob -->
+		<script src="js/jquery.knob.js"></script>
+		<!-- jQuery Sparklines -->
+		<script src="js/jquery.sparklines.js"></script>
+		<!-- jQuery slim scroll -->
+		<script src="js/jquery.slimscroll.min.js"></script>
+		<!-- Data Tables JS -->
+		<script src="js/jquery.dataTables.min.js"></script>
+		<!-- Pretty Photo JS -->
+		<script src="js/jquery.prettyPhoto.js"></script>
+		<!-- Rate It JS -->
+		<script src="js/jquery.rateit.min.js"></script>
+		<!-- Full calendar -->
+		<script src="js/moment.min.js"></script>
+		<script src="js/fullcalendar.min.js"></script>
+		<!-- jQuery gritter -->
+	<!--	<script src="js/jquery.gritter.min.js"></script> -->
+		<!-- jQuery gritter notification -->
+		<script src="js/custom.notification.js"></script>
+		<!-- Respond JS for IE8 -->
+		<script src="js/respond.min.js"></script>
+		<!-- HTML5 Support for IE -->
+		<script src="js/html5shiv.js"></script>
+
+<!-- Javascript for this page -->      
+<script type="text/javascript">
+         
+ 
+$(".btn-tag").click(function(eventObject) {
+    var tag = $(this).html();
+    var totalPanel = document.getElementsByClassName("media").length;
+
+    eventObject.preventDefault();
+    for (var x = 1; x <= totalPanel; x++  ){
+
+      //console.log("json: " + JSON.stringify($(“#data” + x ).html()));
+      if(JSON.stringify($("#data" + x ).html()).indexOf(tag) >= 0 ){
+
+        //console.log( JSON.stringify($(“#data” + x ).html()) );
+        $("#data" + x ).hide();
+        $("#data" + x ).fadeIn();
+      } else {
+        $("#data" + x ).hide();
+      };
+      //console.log(tag);
+      //console.log(JSON.stringify($("#data" + x ).html()).indexOf(tag));
+    }
+    //console.log(tag);
+
+  });
+  //console.log("total blocks: " + document.getElementsByClassName(“media”).length );
+
+
+
+ $(function(){
+
+
+});
+
+	   
+   </script>
+
+<!-- Custom JS -->
+<script src="js/custom.js"></script>
+<script src="js/custom1.js"></script>
+
+</body>
+
+</html>

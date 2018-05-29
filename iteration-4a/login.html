@@ -3,7 +3,7 @@
 
 <head>
 	<!-- Title here -->
-	<title>Data Exchange - home</title>
+	<title>Sprint 2 - Data Exchange - Sign in</title>
 	<!-- Description, Keywords and Author -->
 	<meta name="description" content="Your description">
 	<meta name="keywords" content="Your,Keywords">
@@ -34,6 +34,47 @@
 	<link rel="shortcut icon" href="#">
 	<style type="text/css">
 
+.nav-list li>a>img{
+	width:40px;
+	margin-right:10px;
+}
+.nav-list li>a>span{
+	color:#fff;
+	font-size: 1.3em;
+}
+.nav-list li{
+	padding:15px;
+	border-right:1px solid rgb(80, 79, 79);
+}
+.nav-list li>a{
+	
+	opacity: 0.75;
+}
+.nav-list li.active>a{
+	opacity: 1;;
+}
+.nav-list li>a:hover,
+.nav-list li>a:focus{
+	opacity: 1;
+}
+.nav-list{margin-bottom:0; padding-bottom:3px}
+/*search */
+/* nav bar search box - drop down menu button */
+.navbar .navbar-search .dropdown-menu { min-width: 25px; }
+.dropdown-menu .label-icon { margin-left: 5px; }
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.navbar-search>label{
+	padding:12px;
+	display:block;
+	background-color: darkgrey;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: 100;
+}
 
 	</style>
 </head>
@@ -86,7 +127,7 @@
 
 
 				<ul class="navbar navbar-inverse nav-list list-inline" style="padding-left:30px">
-					<li><a href="consumers.html"><img src="img/consumers-inverse.png"><span class="hidden-xs">Consumers</span></a></li>
+					<li class="active"><a href="#"><img src="img/consumers-inverse.png"><span class="hidden-xs">Consumers</span></a></li>
 					<li><a href="#"><img src="img/performance-inverse.png"><span class="hidden-xs">Supplier performance</span></a></li>
 					<li><a href="#"><img src="img/retail-inverse.png"><span class="hidden-xs">Retail</span></a></li>
 					<li><a href="#"><img src="img/tag-inverse.png"><span class="hidden-xs">Wholesale</span></a></li>
@@ -137,7 +178,7 @@
 													<ul class="nav nav-tabs nav-justified">
 													  <li class="active"><a href="#login" data-toggle="tab" class="br-lblue"><i class="fa fa-sign-in"></i> Sign In</a></li>
 													  <li><a href="#register" data-toggle="tab" class="br-lblue"><i class="fa fa-pencil"></i> Sign Up</a></li>
-													  <li><a href="#contact" data-toggle="tab" class="br-lblue"><i class="fa fa-envelope"></i> Contact Us</a></li>
+													  <li><a href="#contact" data-toggle="tab" class="br-lblue"><i class="fa fa-envelope"></i> Mail Us</a></li>
 													</ul>
 								
 													<!-- Tab panes -->
@@ -160,8 +201,7 @@
 															  <input type="checkbox"> Remember Me Next Time
 															</label>
 														  </div>
-															<button type="submit" class="btn btn-info btn-lg">Sign in</button>
-	
+														  <button type="submit" class="btn btn-info btn-lg">Sign in</button>
 														  <button type="reset" class="btn btn-default btn-lg">Reset</button>
 														</form>
 														

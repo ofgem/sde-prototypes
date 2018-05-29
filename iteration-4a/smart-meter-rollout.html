@@ -3,7 +3,7 @@
 
 <head>
 	<!-- Title here -->
-	<title>Data Exchange - home</title>
+	<title>Data Exchange - smart meter rollout</title>
 	<!-- Description, Keywords and Author -->
 	<meta name="description" content="Your description">
 	<meta name="keywords" content="Your,Keywords">
@@ -33,7 +33,9 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="#">
 	<style type="text/css">
-
+.media-object{
+	width:200px;
+}
 
 	</style>
 </head>
@@ -86,7 +88,7 @@
 
 
 				<ul class="navbar navbar-inverse nav-list list-inline" style="padding-left:30px">
-					<li><a href="consumers.html"><img src="img/consumers-inverse.png"><span class="hidden-xs">Consumers</span></a></li>
+					<li class="active"><a href="consumers.html"><img src="img/consumers-grey.png"><span class="hidden-xs">Consumers</span></a></li>
 					<li><a href="#"><img src="img/performance-inverse.png"><span class="hidden-xs">Supplier performance</span></a></li>
 					<li><a href="#"><img src="img/retail-inverse.png"><span class="hidden-xs">Retail</span></a></li>
 					<li><a href="#"><img src="img/tag-inverse.png"><span class="hidden-xs">Wholesale</span></a></li>
@@ -96,7 +98,7 @@
 				</ul>
 
 	
-				<nav class="navbar navbar-default navbar-inverse" style="padding:9px 0; margin-bottom:0">
+				<nav class="navbar navbar-default navbar-inverse" style="padding:9px 0; margin-bottom:0; display:none">
 						<div class="nav nav-justified navbar-nav">
 				 
 							<form class="navbar-form navbar-search " role="search" style="border:0">
@@ -118,126 +120,110 @@
 					</nav>
 
 							<div>
-
 									<div class="row">
-										<div class="jumbotron panel-primary" style="    background-color: #3B7AA1;
-										color: #F0F1F1;">
-											<div class="container">
-												<h2 style="margin-top:0">Welcome to the Data Exchange</h1>
-													<p>A secure place to exchange data in the Energy industry</p>
+											<div class="jumbotron" style="padding-top:40px;">
+													<div class="container">
+															<ol class="breadcrumb">
+																<li><a href="index.html">Home</a></li>
+																<li><a href="consumers.html">Consumers</a></li>
+																<li class="active">Meters</li>
+															</ol>
+															<hr>
+					
+															
+													<h2 style="margin-top:0">Meter installations in homes and businesses</h1>
+														<p>Information and datasets about the energy needs of consumers in the UK</p>
+												</div>
 											</div>
-										</div>
-										</div>
+											</div>
 
-									<div class="row">
-											<p><br/></p>
-											<div class="login-page">
+									<div class="container">
 
-													<!-- Nav tabs -->
-													<ul class="nav nav-tabs nav-justified">
-													  <li class="active"><a href="#login" data-toggle="tab" class="br-lblue"><i class="fa fa-sign-in"></i> Sign In</a></li>
-													  <li><a href="#register" data-toggle="tab" class="br-lblue"><i class="fa fa-pencil"></i> Sign Up</a></li>
-													  <li><a href="#contact" data-toggle="tab" class="br-lblue"><i class="fa fa-envelope"></i> Contact Us</a></li>
-													</ul>
-								
-													<!-- Tab panes -->
-													<div class="tab-content">
-													  <div class="tab-pane fade active in" id="login">
-													  
-														<!-- Login form -->
-														
-														<form role="form" action="index.html">
-														  <div class="form-group">
-															<label for="email">Email</label>
-															<input type="text" class="form-control" id="email" placeholder="Email">
-														  </div>
-														  <div class="form-group">
-															<label for="password">Password</label>
-															<input type="password" class="form-control" id="password" placeholder="Password">
-														  </div>
-														  <div class="checkbox hidden">
-															<label>
-															  <input type="checkbox"> Remember Me Next Time
-															</label>
-														  </div>
-															<button type="submit" class="btn btn-info btn-lg">Sign in</button>
-	
-														  <button type="reset" class="btn btn-default btn-lg">Reset</button>
-														</form>
-														
-													  </div>
-													  
-													  
-													  <div class="tab-pane fade" id="register">
-														<!-- Register form -->
-													  
-														<div class="alert alert-info">Please complete your details and click <strong>"Submit"</strong> to continue</div>
-														
-														<form role="form" action="index.html">
-														  <div class="form-group">
-															<label for="name">Full Name</label>
-															<input type="text" class="form-control" id="name" placeholder="Full Name">
-														  </div>
-														  <div class="form-group">
-															<label for="email">Email</label>
-															<input type="text" class="form-control" id="email" placeholder="Email">
-														  </div>
-														  <div class="form-group">
-															<label for="password">Password</label>
-															<input type="password" class="form-control" id="password" placeholder="Password">
-														  </div>
-														  <div class="form-group">
-															<label for="cpassword">Confirm Password</label>
-															<input type="cpassword" class="form-control" id="cpassword" placeholder="Confirm Password">
-														  </div>
-														  <div class="checkbox">
-															<label>
-															  <input type="checkbox"> Agree <a href="#">Terms &amp; Conditions</a>
-															</label>
-														  </div>
-														  <button type="submit" class="btn btn-info btn-sm">Submit</button>
-														  <button type="reset" class="btn btn-default btn-sm">Reset</button>
-														</form>
-													  
-													  </div>
-													  
-													  
-													  <div class="tab-pane fade" id="contact">
-														
-														<!-- Contact Form -->
-														
-														<form role="form" action="index.html">
-														  <div class="form-group">
-															<label for="name">Name</label>
-															<input type="text" class="form-control" id="name" placeholder="Name">
-														  </div>
-														  <div class="form-group">
-															<label for="email">Email</label>
-															<input type="text" class="form-control" id="email" placeholder="Email">
-														  </div>
-														  <div class="form-group">
-															<label for="message">Message</label>
-															<textarea rows="3" class="form-control"></textarea>
-														  </div>
-														  <button type="submit" class="btn btn-info btn-sm">Submit</button>
-														  <button type="reset" class="btn btn-default btn-sm">Reset</button>
-														</form>
-														
-													  </div>
-													</div>
-													
-											 </div>
+			
 
 
-	
+<div class="row">
+	<div class="panel">
+		<div class="panel-body">
+				<form class="form-inline">
+				<span class="form-control-static">Meter type</span>
+		<select class="form-control">
+			<option>All meters</option>
+			<option>Smart meters</option>
+			<option>Prepayment meters</option>
+			<option value="" disabled="disabled">───────────</option>
+			<option>Standard meters</option>
+			<option>Dial meters</option>
+			<option>Digital meters</option>
+		  </select>
+		  <span class="form-control-static">Supplier size</span>
+		  <select class="form-control">
+				<option>All suppliers</option>
+				<option>Large</option>
+				<option>Medium</option>
+				<option>Small</option>
+			  </select>
+			  <span class="form-control-static">Energy Type</span>
+			  <select class="form-control">
+					<option>Gas and Electric</option>
+					<option>Gas</option>
+					<option>Electric</option>
+				  </select>
+				  
+				  <span class="form-control-static">Customer type</span>	  
+				  <select class="form-control">
+						<option>Domestic and non domestic</option>
+						<option>Domestic</option>
+						<option>Non Domestic</option>
+					  </select>
+					  <span class="form-control-static">Year</span>	  
+					  <select class="form-control">
+							<option>2018</option>
+							<option>2017</option>
+							<option>2016</option>
+							<option>2015</option>	
+							<option>2014</option>
+						  </select>
+			  </form>
+			  <form class="form-inline">
+					<a href="#" class="btn btn-primary"><i class="fa fa-download"></i>&nbsp; Download data</a>	
+
+					<table class="table">
+<tbody>
+
+		<tr><th>Quarter</th><th>Year</th><th>Gas</th><th>Electricity</th><th>All</th><tr>
+				<tr><td>Q2</td><td>2018</td><td>587948</td><td>756401</td><td>1344349</td><tr>
+				<tr><td>Q1</td><td>2018</td><td>581667</td><td>748125</td><td>1329792</td><tr>
+				<tr><td>Q4</td><td>2017</td><td>576338</td><td>741547</td><td>1317885</td><tr>
+				<tr><td>Q3</td><td>2017</td><td>516264</td><td>664924</td><td>1181188</td><tr>
+				<tr><td>Q2</td><td>2017</td><td>460068</td><td>598064</td><td>1058132</td><tr>
+				<tr><td>Q1</td><td>2017</td><td>446000</td><td>581680</td><td>1027680</td><tr>
+				<tr><td>Q4</td><td>2016</td><td>409670</td><td>525776</td><td>935446</td><tr>
+				<tr><td>Q3</td><td>2016</td><td>353668</td><td>461304</td><td>814972</td><tr>
+				<tr><td>Q2</td><td>2016</td><td>268262</td><td>354641</td><td>622903</td><tr>
+				<tr><td>Q1</td><td>2016</td><td>233284</td><td>306842</td><td>540126</td><tr>
+				<tr><td>Q4</td><td>2015</td><td>169238</td><td>233400</td><td>402638</td><tr>
+				<tr><td>Q3</td><td>2015</td><td>138150</td><td>197911</td><td>336061</td><tr>
+				<tr><td>Q2</td><td>2015</td><td>112055</td><td>160543</td><td>272598</td><tr>
+				<tr><td>Q1</td><td>2015</td><td>85202</td><td>126515</td><td>211717</td><tr>
+				<tr><td>Q4</td><td>2014</td><td>60882</td><td>82081</td><td>142963</td><tr>
+				<tr><td>Q3</td><td>2014</td><td>53764</td><td>76227</td><td>129991</td><tr>
+				<tr><td>Q2</td><td>2014</td><td>37113</td><td>60216</td><td>97329</td><tr>
+				<tr><td>Q1</td><td>2014</td><td>37480</td><td>61164</td><td>98644</td><tr>
+				<tr><td>Q4</td><td>2013</td><td>39730</td><td>55603</td><td>95333</td><tr>
+				<tr><td>Q3</td><td>2013</td><td>35190</td><td>57632</td><td>92822</td><tr>
+				<tr><td>Q2</td><td>2013</td><td>35130</td><td>45456</td><td>80586</td><tr>
+				<tr><td>Q1</td><td>2013</td><td>10963</td><td>12678</td><td>23641</td><tr>
+				<tr><td>Q4</td><td>2012</td><td>1570</td><td>1671</td><td>3241</td><tr>
+				<tr><td>Q3</td><td>2012</td><td>32</td><td>36</td><td>68</td><tr>
+</tbody>
+
+					</table>
+		</div>
+	  </div>
+	</div>
 
 
-
-
-										</div>
-							  
-							  
-							</div>
 						</div>
 						</div>
 
@@ -306,6 +292,32 @@
 <script type="text/javascript">
          
  
+$(".btn-tag").click(function(eventObject) {
+    var tag = $(this).html();
+    var totalPanel = document.getElementsByClassName("media").length;
+
+    eventObject.preventDefault();
+    for (var x = 1; x <= totalPanel; x++  ){
+
+      //console.log("json: " + JSON.stringify($(“#data” + x ).html()));
+      if(JSON.stringify($("#data" + x ).html()).indexOf(tag) >= 0 ){
+
+        //console.log( JSON.stringify($(“#data” + x ).html()) );
+        $("#data" + x ).hide();
+        $("#data" + x ).fadeIn();
+      } else {
+        $("#data" + x ).hide();
+      };
+      //console.log(tag);
+      //console.log(JSON.stringify($("#data" + x ).html()).indexOf(tag));
+    }
+    //console.log(tag);
+
+  });
+  //console.log("total blocks: " + document.getElementsByClassName(“media”).length );
+
+
+
  $(function(){
 
 
