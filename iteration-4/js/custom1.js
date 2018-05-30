@@ -1,7 +1,8 @@
 var landingpage = "landing.html";
 
 $(function(){
-	if (getParameterByName("type").toLowerCase()=="consumer"){
+	var type = getParameterByName("type");
+	if (type != null && type.toLowerCase()=="consumer"){
 		// change what you see when you click Sign In
 		landingpage = "alldatasets.html";
 	  }
