@@ -4,9 +4,6 @@
 /* Show navigation when the width is greather than or equal to 991px */
 $(document).ready(function() {
 
- 
-
-$(document).ready(function(){
   var hash = window.location.hash;
   alert(hash);
 if (hash == "#newdata"){
@@ -14,7 +11,7 @@ if (hash == "#newdata"){
 }
 
  
-});
+
 
 
 
@@ -42,7 +39,7 @@ if (hash == "#newdata"){
 	}	
   });
 
-});
 
+});
 
  
