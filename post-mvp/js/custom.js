@@ -1,6 +1,6 @@
 /* Sidebar navigation */
 /* ------------------ */
-
+var numfiles = 1;
 /* Show navigation when the width is greather than or equal to 991px */
 $(document).ready(function() {
 
@@ -12,7 +12,11 @@ if (hash == "#newdata"){
 
  
 
-
+$("#btn-add-another-file").on("click", function(e){
+  numfiles+=1;
+  $("#js-row-" + numfiles).show();
+  $("#js-num-files").text(numfiles);
+})
 
 
   $("#btn-add-new-submission").on("click", function(e){

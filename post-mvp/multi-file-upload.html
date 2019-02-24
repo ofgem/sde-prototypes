@@ -171,6 +171,7 @@
 												<form>
 													<p>
 														<select class="form-control">
+															<option>[Please select]</option>
 															<option>Complaint data</option>
 															<option>Electricity market shares</option>
 															<option>Gas market shares</option>
@@ -246,11 +247,35 @@
 											</div>
 											<div><br/>
 											</div>
-											<h4 style="padding-bottom:1em">1 file in the submission</h4>
+											<h4 style="padding-bottom:1em"><span id="js-num-files">1</span> file in the submission</h4>
 											<div class="row">
 												<div class="col-md-3">complaints-data-1.csv</div>
-												<div class="col-md-2">20/02/2019</div>
-												<div class="col-md-2">12.4 Mbytes</div>
+												<div class="col-md-2">01/03/2019</div>
+												<div class="col-md-2">6.4 Mbytes</div>
+												<div class="col-md-4">Success</div>
+											</div>
+											<div class="row" id="js-row-2" style="display:none">
+												<div class="col-md-3">complaints-data-2.csv</div>
+												<div class="col-md-2">01/03/2019</div>
+												<div class="col-md-2">2.9 Mbytes</div>
+												<div class="col-md-4">Success</div>
+											</div>
+											<div class="row" id="js-row-3" style="display:none">
+												<div class="col-md-3">complaints-data-3.csv</div>
+												<div class="col-md-2">01/03/2019</div>
+												<div class="col-md-2">1.1 Mbytes</div>
+												<div class="col-md-4">Success</div>
+											</div>	
+											<div class="row" id="js-row-4" style="display:none">
+												<div class="col-md-3">complaints-data-4.csv</div>
+												<div class="col-md-2">01/03/2019</div>
+												<div class="col-md-2">1.4 Mbytes</div>
+												<div class="col-md-4">Success</div>
+											</div>
+											<div class="row" id="js-row-5" style="display:none">
+												<div class="col-md-3">complaints-data-5.csv</div>
+												<div class="col-md-2">01/03/2019</div>
+												<div class="col-md-2">2.7 Mbytes</div>
 												<div class="col-md-4">Success</div>
 											</div>
 											<p>
@@ -263,7 +288,7 @@
 
 																<a class="btn btn-primary" href="upload-complete.html"><i class="fa fa-check"></i> Submit files</a>
 
-																<a class="btn btn-default"><i class="fa fa-plus"></i> Add file</a>
+																<a class="btn btn-default" id="btn-add-another-file"><i class="fa fa-plus"></i> Add file</a>
 															</p>
 															<p style="padding-top:12px">
 																	<a class="btn btn-links" href="index.html"><i class="fa fa-chevron-left"></i>back to dashboard</a>
