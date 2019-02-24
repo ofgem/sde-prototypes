@@ -8,8 +8,8 @@ $(document).ready(function() {
 
 $(document).ready(function(){
   var hash = window.location.hash;
-if (hash == "#previous"){
-  
+if (hash == "#newdata"){
+  $("#js-new-data").show(); 
 }
 
  
